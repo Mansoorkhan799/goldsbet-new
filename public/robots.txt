@@ -1,0 +1,146 @@
+# robots.txt for goldsbetapp.com.pk
+
+# ============================================
+# AI CONTENT USAGE POLICY
+# ============================================
+# As a condition of accessing this website, you agree to abide by the following
+# content signals:
+#
+# (a) If a content-signal = yes, you may collect content for the corresponding use.
+# (b) If a content-signal = no, you may not collect content for the corresponding use.
+# (c) If no signal is present, the website operator neither grants nor restricts
+#     permission via content signal with respect to the corresponding use.
+#
+# Content signals:
+# - search:    Building search index and providing search results
+# - ai-input:  Using content for AI-generated answers and responses
+# - ai-train:  Training or fine-tuning AI models
+#
+# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF
+# RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT
+# AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.
+
+# ============================================
+# MAIN CRAWLER RULES
+# ============================================
+
+# Allow search engines, but prevent AI training
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Priority pages
+Allow: /download-goldsbet-apk
+Allow: /how-to-register-on-goldsbet
+Allow: /goldsbet-login
+Allow: /how-to-deposit-on-goldsbet
+Allow: /how-to-withdraw-from-goldsbet
+Allow: /goldsbet-for-pc
+Allow: /goldsbet-for-ios
+Allow: /how-to-earn-money-on-goldsbet
+Allow: /is-goldsbet-real-or-fake
+Allow: /goldsbet-withdrawal-proof
+Allow: /goldsbet-alternatives
+Allow: /about-goldsbet
+Allow: /blog
+Allow: /blog/how-to-download-goldsbet-apk-pakistan-2026
+Allow: /blog/goldsbet-welcome-bonus-how-to-claim-200-percent
+Allow: /blog/goldsbet-vs-spin-win-pk-which-is-better-2026
+Allow: /blog/how-to-withdraw-money-goldsbet-jazzcash
+Allow: /blog/goldsbet-teen-patti-strategy-guide-pakistani-players
+Allow: /blog/is-goldsbet-real-or-fake-honest-review-2026
+Allow: /blog/goldsbet-cricket-betting-guide-psl-ipl-tips-2026
+Allow: /blog/goldsbet-vip-program-all-7-levels-explained
+Allow: /blog/how-to-register-goldsbet-step-by-step-guide
+Allow: /blog/goldsbet-slots-guide-best-games-highest-rtp-2026
+
+# Standard pages
+Allow: /contact
+Allow: /privacy-policy
+Allow: /disclaimer
+
+# ============================================
+# AI BOT RESTRICTIONS (Training Prevention)
+# ============================================
+
+# OpenAI GPTBot - Block training
+User-agent: GPTBot
+Disallow: /
+
+# Anthropic ClaudeBot - Block training
+User-agent: ClaudeBot
+Disallow: /
+
+# Google Extended (AI Training) - Block training
+User-agent: Google-Extended
+Disallow: /
+
+# Meta AI External Agent
+User-agent: meta-externalagent
+Disallow: /
+
+# Amazon Bot
+User-agent: Amazonbot
+Disallow: /
+
+# Apple AI Extended
+User-agent: Applebot-Extended
+Disallow: /
+
+# ByteDance/TikTok Spider
+User-agent: Bytespider
+Disallow: /
+
+# Common Crawl Bot
+User-agent: CCBot
+Disallow: /
+
+# Perplexity AI Bot
+User-agent: PerplexityBot
+Disallow: /
+
+# Cohere AI Bot
+User-agent: cohere-ai
+Disallow: /
+
+# ============================================
+# SEARCH ENGINE BOTS (Explicitly Allow)
+# ============================================
+
+# Google Search Bot (Not AI training)
+User-agent: Googlebot
+Allow: /
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+
+# Google Mobile Bot
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+
+# Baidu Spider (Chinese search)
+User-agent: Baiduspider
+Allow: /
+
+# Yandex Bot (Russian search)
+User-agent: Yandex
+Allow: /
+
+# ============================================
+# SITEMAPS
+# ============================================
+
+Sitemap: https://goldsbetapp.com.pk/sitemap.xml
+
+# ============================================
+# IMPORTANT: DO NOT ADD Host DIRECTIVE
+# ============================================
+# The Host directive is DEPRECATED and IGNORED by Googlebot.
+# Adding it will cause warnings in Google Search Console.
+# Use canonical URLs and redirects instead (handled at hosting level).
