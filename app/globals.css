@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
+@theme {
+ --color-gold: #D4AF37;
+ --color-gold-dark: #B8960C;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+ --gold: #D4AF37;
+ --gold-dark: #B8960C;
+ --bg-dark: #0A0A0A;
+ --card-dark: #1A1A1A;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+ scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+ font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global: ensure strong/b are always white on dark bg */
+strong, b {
+ color: #ffffff;
+ font-weight: 600;
+}
+
+/* Prose styles for blog content */
+.prose-custom h2 {
+ @apply text-2xl font-bold text-white mt-10 mb-4 border-b border-white/10 pb-3;
+}
+.prose-custom h3 {
+ @apply text-xl font-semibold text-gray-100 mt-8 mb-3;
+}
+.prose-custom p {
+ @apply text-gray-300 leading-relaxed mb-4;
+}
+.prose-custom ul {
+ @apply list-none space-y-2 mb-6;
+}
+.prose-custom ul li {
+ @apply flex items-start gap-2 text-gray-300;
+}
+.prose-custom ul li::before {
+ content: '✓';
+ @apply text-[#D4AF37] font-bold flex-shrink-0 mt-0.5;
+}
+.prose-custom ol {
+ @apply list-decimal list-inside space-y-2 mb-6;
+}
+.prose-custom ol li {
+ @apply text-gray-300;
+}
+.prose-custom strong {
+ @apply text-white font-semibold;
+}
+.prose-custom table {
+ @apply w-full border-collapse mb-6 rounded-xl overflow-hidden;
+}
+.prose-custom thead tr {
+ @apply bg-[#D4AF37]/20;
+}
+.prose-custom th {
+ @apply px-4 py-3 text-left text-sm font-semibold text-white;
+}
+.prose-custom td {
+ @apply px-4 py-3 text-sm text-gray-300 border-t border-white/5;
+}
+.prose-custom tbody tr:hover {
+ @apply bg-white/5;
+}
+.prose-custom blockquote {
+ @apply border-l-4 border-[#D4AF37] pl-4 italic text-gray-400 mb-4;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+ width: 6px;
+}
+::-webkit-scrollbar-track {
+ background: transparent;
+}
+::-webkit-scrollbar-thumb {
+ background: #D4AF37;
+ border-radius: 3px;
+}
+
+@keyframes slide-up {
+ from { transform: translateY(100%); opacity: 0; }
+ to { transform: translateY(0); opacity: 1; }
+}
+.animate-slide-up {
+ animation: slide-up 0.3s ease-out;
+}
+
+@keyframes fade-in {
+ from { opacity: 0; transform: translateY(20px); }
+ to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+ animation: fade-in 0.6s ease-out;
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+ background: linear-gradient(135deg, #D4AF37, #F5D77A, #B8960C);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
 }
