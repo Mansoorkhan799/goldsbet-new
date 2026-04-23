@@ -10,7 +10,7 @@ import { organizationSchema, websiteSchema } from "@/lib/schema";
 export const metadata: Metadata = {
  metadataBase: new URL(SITE.url),
  title: {
- default: `GoldsBet App Download 2026 | Official GoldsBet APK for Real Cash in Pakistan`,
+ default: `Goldsbet APP Pakistan | Download Official for Android and iOS`,
  template: `%s | GoldsBet Pakistan`,
  },
  description: SITE.description,
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
  locale: "en_PK",
  url: SITE.url,
  siteName: SITE.name,
- title: `GoldsBet App Download 2026 | Official GoldsBet APK Pakistan`,
+ title: `Goldsbet APP Pakistan | Download Official for Android and iOS`,
  description: SITE.description,
  images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "GoldsBet Pakistan"}],
  },
  twitter: {
  card: "summary_large_image",
- title: `GoldsBet App Download 2026 | Official GoldsBet APK Pakistan`,
+ title: `Goldsbet APP Pakistan | Download Official for Android and iOS`,
  description: SITE.description,
  images: ["/og-image.jpg"],
  },
