@@ -76,7 +76,21 @@ function SectionTag({ children }: { children: React.ReactNode }) {
  );
 }
 
-function PhoneMockup({ src, alt, className = "", objectPosition = "object-center"}: { src: string; alt: string; className?: string; objectPosition?: string }) {
+function PhoneMockup({
+ src,
+ alt,
+ className = "",
+ objectPosition = "object-center",
+ imageLoading = "lazy",
+ imagePriority = false,
+}: {
+ src: string;
+ alt: string;
+ className?: string;
+ objectPosition?: string;
+ imageLoading?: "lazy" | "eager";
+ imagePriority?: boolean;
+}) {
  return (
  <div className={`relative flex-shrink-0 ${className}`}>
  {/* Outer glow */}
@@ -92,6 +106,8 @@ function PhoneMockup({ src, alt, className = "", objectPosition = "object-center
  alt={alt}
  fill
  sizes="220px"
+      loading={imageLoading}
+      priority={imagePriority}
  className={`object-cover ${objectPosition}`}
  />
  {/* Screen glare */}
@@ -186,7 +202,7 @@ export default function HomePage() {
  </div>
 
  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-5">
- GoldsBet App Download 2026{""}
+                GoldsBet App Download 2026{" "}
  <span className="text-gold-gradient">Official APK</span> for Pakistan
  </h1>
 
@@ -414,11 +430,11 @@ export default function HomePage() {
  {APP_INFO.map((row, i) => (
  <div
  key={row.field}
- className={`flex items-center justify-between px-6 py-4 ${
- i % 2 === 0
- ? "bg-white/5"
- : "bg-white dark:bg-transparent"
- } border-b border-white/5 last:border-0`}
+                className={`flex items-center justify-between px-6 py-4 ${
+                  i % 2 === 0
+                    ? "bg-white/5"
+                    : "bg-[#1A1A1A]"
+                } border-b border-white/5 last:border-0`}
  >
  <span className="text-sm font-semibold text-gray-400 w-40">
  {row.field}
@@ -578,6 +594,8 @@ export default function HomePage() {
  src="/goldsbet-app-pakistan-interface.webp"
  alt="GoldsBet App Download Pakistan"
  objectPosition="object-center"
+              imageLoading="eager"
+              imagePriority
  />
  </div>
  </div>
@@ -959,7 +977,7 @@ export default function HomePage() {
  </h3>
  <ul className="space-y-3">
  {PROS.map((pro) => (
- <li key={pro} className="flex items-start gap-2 text-sm text-gray-300">
+                <li key={pro} className="flex items-start gap-2 text-sm text-gray-800 dark:text-gray-300">
  <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5"/>
  {pro}
  </li>
@@ -972,7 +990,7 @@ export default function HomePage() {
  </h3>
  <ul className="space-y-3">
  {CONS.map((con) => (
- <li key={con} className="flex items-start gap-2 text-sm text-gray-300">
+                <li key={con} className="flex items-start gap-2 text-sm text-gray-800 dark:text-gray-300">
  <XCircle className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5"/>
  {con}
  </li>
