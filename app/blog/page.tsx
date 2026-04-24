@@ -40,7 +40,7 @@ export default function BlogPage() {
  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="flex flex-wrap gap-2">
  {categories.map((cat) => (
- <span key={cat} className={`px-3 py-1.5 rounded-full text-xs font-semibold cursor-pointer transition-all ${cat === "All"? "bg-[#D4AF37] text-black": "bg-white dark:bg-white/10 text-gray-300 border border-white/10 dark:border-white/20 hover:border-[#D4AF37]/40"}`}>
+<span key={cat} className={`px-3 py-1.5 rounded-full text-xs font-semibold cursor-pointer transition-all ${cat === "All"? "bg-[#D4AF37] text-black": "bg-white text-gray-700 border border-gray-200 hover:text-black hover:border-[#D4AF37]/40"}`}>
  {cat}
  </span>
  ))}
