@@ -17,7 +17,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
- title: "GoldsBet App Download 2026 | Official GoldsBet APK for Real Cash in Pakistan",
+ title: "Goldsbet | Free Download Official APP on Android & iOS",
  description:
  "Download the official GoldsBet app (latest APK v6.0.6) and play casino, cricket, teen patti and live sports with secure JazzCash & EasyPaisa deposits in Pakistan. Claim your GoldsBet welcome bonus today.",
  alternates: { canonical: SITE.url },
