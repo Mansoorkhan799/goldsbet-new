@@ -55,12 +55,7 @@ export default function WithdrawPage() {
  {/* Hero */}
  <section className="py-16 bg-gradient-to-b from-[#0A0A0A] to-[#111111] text-white">
  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
- <Breadcrumb
- items={[
- { label: "Home", href: "/"},
- { label: "Withdraw Money", href: "/how-to-withdraw-from-goldsbet"},
- ]}
- />
+ <Breadcrumb items={[{ label: "Withdraw Money" }]} />
  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/30 text-[#D4AF37] text-sm font-medium mb-5">
  <Banknote className="w-4 h-4"/>
  Instant Cashout
